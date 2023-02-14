@@ -4,3 +4,19 @@
     <%= @company["state"] %></h2>
 
 <a href="/companies"> All companies </a>
+
+<h3>Contacts</h3>
+
+<ul>
+    <% for contact in @contacts %>
+        <li><%= contact["first_name"]%>
+            <%= contact["last_name"]%> 
+        </li>
+    <% end %>
+</ul>
+
+<p>
+    <a href="/contacts/new?company_id=
+    <%= @company["id"] %>">Creat a contact at
+    <%= @company["name"] %></a>
+</p>
